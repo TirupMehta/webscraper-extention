@@ -39,7 +39,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## Developer
 
-Developed by **[Tirup Mehta]** ([Your GitHub Handle](https://github.com/[TirupMehta])). Passionate about creating tools that empower coders and hackers to explore the web.
+Developed by [Tirup Mehta](https://github.com/[TirupMehta]). Passionate about creating tools that empower coders and hackers to explore the web.
 
 ## License
 
