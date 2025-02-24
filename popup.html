@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Scraper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1> Web Scraper</h1>
+  </header>
+  <main>
+    <section id="controls" class="animate-slide-in">
+      <h2 tabindex="0">Scrape Options</h2>
+      <div class="options-grid">
+        <label><input type="checkbox" id="text"> Text</label>
+        <label><input type="checkbox" id="links"> Links</label>
+        <label><input type="checkbox" id="images"> Images</label>
+        <label><input type="checkbox" id="tables"> Tables</label>
+      </div>
+      <div class="custom-selector">
+        <label for="custom-selector">Custom CSS Selector:</label>
+        <input type="text" id="custom-selector" placeholder="e.g., .class, #id" aria-describedby="selector-help">
+        <small id="selector-help">Enter a valid CSS selector</small>
+      </div>
+      <div class="button-group">
+        <button id="preview-btn" aria-label="Preview selector">Preview</button>
+        <button id="scrape-btn" aria-label="Start scraping">Scrape</button>
+      </div>
+    </section>
+    
+    <section id="presets" class="animate-slide-in" style="display: none;">
+      <h2 tabindex="0">Presets</h2>
+      <select id="preset-list">
+        <option value="">Select a preset</option>
+      </select>
+      <button id="save-preset-btn">Save Current</button>
+      <button id="delete-preset-btn">Delete Selected</button>
+    </section>
+    
+    <section id="results" style="display: none;">
+      <h2 tabindex="0">Results</h2>
+      <div id="data-container" class="data-container"></div>
+      <div class="export-buttons">
+        <button id="export-json">Export JSON</button>
+        <button id="export-csv">Export CSV</button>
+        <button id="copy-clipboard">Copy to Clipboard</button>
+      </div>
+    </section>
+    
+    <div id="loading" class="spinner" style="display: none;" aria-live="polite">
+      <span>Loading...</span>
+    </div>
+  </main>
+  <footer>
+    <button id="toggle-presets" aria-label="Toggle presets section">Presets</button>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
